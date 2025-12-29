@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ARKK TRAVELS | Umrah Packages</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f6f8;
+}
+
+header{
+  background:#003366;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+.slideshow{
+  max-width:900px;
+  margin:30px auto;
+  position:relative;
+}
+
+.slideshow img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  display:none;
+}
+
+footer{
+  background:#003366;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>ARKK TRAVELS</h1>
+<p>Ramzan Umrah Packages</p>
+</header>
+
+<div class="slideshow">
+  <img src="slide1.jpg" class="slide">
+  <img src="slide2.jpg" class="slide">
+</div>
+
+<footer>
+<p>Contact: arkktravels@gmail.com | WhatsApp +44 7760 917942</p>
+</footer>
+
+<script>
+let index = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlides(){
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display="none";
+  }
+  index++;
+  if(index > slides.length){ index = 1; }
+  slides[index-1].style.display="block";
+}
+
+showSlides();
+setInterval(showSlides, 3000);
+</script>
+
+</body>
+</html>
